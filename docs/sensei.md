@@ -7,9 +7,7 @@ has_toc: false
 ---
 
 # Sensei
-[![Docker Image CI](https://github.com/dojo-modeling/sensei/actions/workflows/docker.yaml/badge.svg)](https://github.com/dojo-modeling/sensei/actions/workflows/docker.yaml)
-
-v0.2.4
+`v0.2.4`
 
 [Sensei](https://github.com/dojo-modeling/sensei) is a data-driven top-down modeling engine that provides projections, as well as parameter and uncertainty estimates for time series where variable relationships are defined by a CAG structure. Sensei models the multivariate time series as a set of univariate time series models with "regressors" defined by the CAG structure. That is to say, each node in the CAG gets its own model, which consists of a univariate time series model which parameterizes the trend and seasonality of the time series, as well as coefficients on the incoming edges from one-step-behind values. We compute parameters and projections step-wise, i.e. every model estimates one-time-step-ahead projections iteratively. 
 
