@@ -17,6 +17,7 @@ has_toc: false
 The DySE simulator is a discrete state network model projection tool which leverages directed interaction graphs to simulate how influences propagate in complex systems. In the graph, each node represents a single concept, and each directed edge represents an interaction/influence. It is used in a wide range of modeling challenges where the interactions between system components play a dominant role, in contrast to individual component behaviors.
 
 ![Fig. 1](dyse_doc_fig1.png) 
+
 Fig. 1: An example of DySE model underlying network
 
 #### Method description
@@ -30,6 +31,7 @@ Model element is a node with a discrete variable (level). Each element in the mo
 6. Initial 0: initial level value and encoded constraints (user-clamped values at specified simulation time steps)
 
 ![Fig. 2](dyse_doc_fig2.png) 
+
 Fig. 2: Element naming convention with respect to the interaction between them
 
 Simulations are run in discrete time steps, where, during each time step a single element with a non-empty set of regulators is arbitrarily selected to be updated (i.e., a random sequential simulation scheme). The selected element has its level updated according to the update function value, defined in the model spreadsheet (DySE simulator input file). The update function takes two numerical arguments for each regulator: level and trend (difference between current and last observed level). The strength of the regulator influence is defined by parameters we refer to as level weight and trend weight. For more details, refer to the DiSH-trend simulator publication.
@@ -56,6 +58,7 @@ Alongside the simulator, DySE provides utilities for preprocessing historical da
 Weights inference is challenging, as many of the nodes in the network can have missing or poor-quality data. Typically, these are treated with Bayesian inference, but this approach could be considered too slow for practical purposes. To find a balanced solution, DySE has a graph crawling utility algorithm which aligns time grids of the influence sets and their regulated elements and performs local non-negative linear regression fits wherever possible. If weight inference from data is impossible, DySE assigns defaults of trend weight equal to 0.5, and level weight equal to 0.
 
 ![Fig. 3](dyse_doc_fig3.png)
+
 Fig. 3: DySE simulator workflow
 
 
@@ -91,6 +94,7 @@ Implementation Types: To balance the running speed and analysis accuracy, we imp
 Note that in CauseMos, these matrices are visualized via a colormap, and entries are annotated by their rank within the matrices. In the colormap, the darkness of an entry suggests the magnitude of the influence, the annotated number is the order of the influence magnitude among all influences, ranking from the highest to the lowest. In the DySE engine, the returned matrices are alphabetical in the order of element names, but the CauseMos interface also provides flexibility of ranking them by a certain row or column. For example, the users can sort the matrix by the most impact on crops production via clicking ‘crops production’ on the ‘impact’ row.
 
 ![Fig. 4](dyse_doc_fig4.png)
+
 Fig. 4: An example of influence matrix shown as a colormap in CauseMos interface
 
 
@@ -99,6 +103,7 @@ Fig. 4: An example of influence matrix shown as a colormap in CauseMos interface
 Users start with a CAG assembled from concepts and interactions. Users then assign weights and initial values , and then run DySE’s projection engine to forecast the change curve for concepts of interest. After this point, sensitivity analysis can be conducted to obtain an immediate influence matrix and then a global influence matrix. The returned matrices are visualized in the CauseMos interface. Each time a user changes the CAG (e.g., CAG structure, weight values or initial values), new matrices will be generated accordingly.
  
 ![Fig. 5](dyse_doc_fig5.png)
+
 Fig. 5: Pipeline of sensitivity and path analysis in DySE engine
 
 ### 2.2 Pathway Analysis
@@ -132,6 +137,7 @@ Based on different use cases, a number of paths from any source(s) to any target
 Note that in CauseMos interface, the pathway analysis is located at ‘ANALYTICS > > Influence Path’ on the left menu bar, top paths from one source to one target will be generated, ranked by the path score from the smallest to the largest (i.e., from the most influential to the least). When the user clicks on a path in the list, that path will be highlighted in the CAG.
  
 ![Fig. 6](dyse_doc_fig6.png)
+
 Fig. 6: An example of pathway analysis result in CauseMos
 
 See Pipeline in Sensitivity Analysis section
