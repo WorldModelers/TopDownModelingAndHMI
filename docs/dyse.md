@@ -16,7 +16,7 @@ has_toc: false
 
 The DySE simulator is a discrete state network model projection tool which leverages directed interaction graphs to simulate how influences propagate in complex systems. In the graph, each node represents a single concept, and each directed edge represents an interaction/influence. It is used in a wide range of modeling challenges where the interactions between system components play a dominant role, in contrast to individual component behaviors. There are two types of supported influences: level-based regulation where a level of an element (regulator) is influencing the target element, and trend-based regulation where trend (difference between the current and the previous level) is considered instead.
 
-![Fig. 1](images/dyse_doc_fig1.png) 
+![Fig. 1](images/dyse_doc_fig1.jpg) 
 
 Fig. 1: An example of DySE model underlying network
 
@@ -150,11 +150,15 @@ See Pipeline in Sensitivity Analysis section
 
 After the dataflow of DySE sensitivity analysis, user can specify source(s) and target(s) concepts, as well number of paths, and the engine will return top paths and their corresponding path scores. Each time the user changes the CAG (e.g., CAG structure, weight values or initial values), new paths will be generated accordingly.
 
+## Citation
+
+If you are using DySE in academic publication, please cite papers [1] and [2] from the References section.
+
 ## References
 
-[1] Sayed, K., Kuo, Y. H., Kulkarni, A., & Miskov-Zivanov, N. (2017, December). DiSH simulator: Capturing dynamics of cellular signaling with heterogeneous knowledge. In 2017 Winter Simulation Conference (WSC) (pp. 896-907). IEEE.
+[1] Sayed, K., Kuo, Y. H., Kulkarni, A., & Miskov-Zivanov, N. (2017, December). DiSH simulator: Capturing dynamics of cellular signaling with heterogeneous knowledge. In 2017 Winter Simulation Conference (WSC) (pp. 896-907). IEEE. doi: 10.1109/WSC.2017.8247841.
 
-[2] Andjelkovic, S., & Miskov-Zivanov, N. (2021). DiSH-trend: Intervention Modeling Simulator That Accounts for Trend Influences. arXiv preprint arXiv:2107.01302.
+[2] Andjelkovic, S., & Miskov-Zivanov, N. (2021, December). DiSH-trend: Intervention Modeling Simulator That Accounts for Trend Influences. In Winter Simulation Conference (WSC). IEEE. doi:10.1109/WSC52266.2021.9715401 
 
 [3] Sayed, K., Telmer, C. A., Butchy, A. A., & Miskov-Zivanov, N. (2017, September). Recipes for translating big data machine reading to executable cellular signaling models. In International Workshop on Machine Learning, Optimization, and Big Data (pp. 1-15). Springer, Cham.
 
