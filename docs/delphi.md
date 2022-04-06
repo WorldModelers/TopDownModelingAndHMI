@@ -29,12 +29,12 @@ Delphi starts training from the starting edge strengths and polarities it gleans
 When an analyst issues a projection request, Delphi simulates each model in the set and produces a projected trajectory resulting in multiple projections per request. The HMI summarizes the projections based on time steps and presents the results to the analyst as the uncertainty of the prediction.
 
 
-##Head nodes
+## Head nodes
 
 Delphi treats CAG nodes that lack incoming edges, i.e., head nodes differently from other nodes when the analyst specifies a period greater than one and applies a seasonal model. The analyst must supply the accurate seasonality of the time series attached to such CAG nodes as the period for Delphi to model them correctly. If the analyst believes that a CAG node without incoming edges is not seasonal, they could convey it to Delphi by setting its period equal to one.
 
 
-##Editing an edge
+## Editing an edge
 
 After an analyst sees the prediction results of a trained Delphi model, the HMI provides a feature for the analyst to dispute what Delphi has learned as the strength and polarity for an edge. An analyst must supply the weight and the polarity for this purpose.
 
@@ -43,11 +43,11 @@ When Delphi receives such a request, Delphi honors the analyst's wish and freeze
 Therefore, the analyst should keep in mind that freezing edges initiate a ripple effect where other model parameters could change during the subsequent Delphi training phase accompanied by setting an edge. This could potentially make it seem like (upon visual inspection at least) that freezing edges does not have an effect on the predictions made by Delphi.
 
 
-##Interventions
+## Interventions
 
 When an analyst sets the values of indicators at specific time steps, Delphi honors them and outputs those exact values at those time steps. Such changes propagate to downstream nodes, and their predictions will change accordingly.
 
-##Further reading
+## Further reading
 
 A mathematics savvy reader is welcome to read the [Delphi technical document](http://vision.cs.arizona.edu/adarsh/Arizona_Text_to_Model_Procedure.pdf), for in-depth explanations of the mathematics behind the Delphi modeling engine.
 
