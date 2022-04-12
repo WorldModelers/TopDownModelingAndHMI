@@ -152,7 +152,7 @@ After the dataflow of DySE sensitivity analysis, user can specify source(s) and 
 
 ## Citation
 
-If you are using DySE in academic publication, please cite papers [1] and [2] from the References section.
+If you are using DySE in academic publication, please cite papers [1], [2], [5], and [6] from the References section.
 
 ## References
 
@@ -163,3 +163,7 @@ If you are using DySE in academic publication, please cite papers [1] and [2] fr
 [3] Sayed, K., Telmer, C. A., Butchy, A. A., & Miskov-Zivanov, N. (2017, September). Recipes for translating big data machine reading to executable cellular signaling models. In International Workshop on Machine Learning, Optimization, and Big Data (pp. 1-15). Springer, Cham.
 
 [4] Telmer, C. A., Sayed, K., Butchy, A., Bocan, K. N., Holtzapple, E., Hansen, C. E., ... & Miskov-Zivanov, N. (2019, May). Dynamic system explanation: DySE, a framework that evolves to reason about complex systems-lessons learned. In Proceedings of the Conference on Artificial Intelligence for Data Discovery and Reuse (pp. 1-10).
+
+[5] Zhou, G., Liang, K. W., & Miskov-Zivanov, N. (2019). Intervention Pathway Discovery via Context-Dependent Dynamic Sensitivity Analysis. arXiv preprint arXiv:1902.03216.
+
+[6] Zhou, G., Liang, K. W., & Miskov-Zivanov, N. (2018, August). Sensitivity Analysis of Discrete Models and Application in Biological Networks. In Proceedings of the 2018 ACM International Conference on Bioinformatics, Computational Biology, and Health Informatics (pp. 605-606).
